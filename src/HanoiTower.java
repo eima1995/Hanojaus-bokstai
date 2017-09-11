@@ -23,8 +23,6 @@ public class HanoiTower {
             int dics = a.getDisc().pop();   
             c.getDisc().push(dics);
             
-            
-            
             System.out.println(String.format("%4s", ++turn) + ". Diska " + dics + " nuo " + a.getName() + " perkelti ant " + c.getName() +  ". " + printAllPoles()); 
             
             hb(b, a, c, n-1);    // perkelti n - 1 ant tikslo
@@ -49,28 +47,8 @@ public class HanoiTower {
         System.out.println("Pradine busena " + tower.printAllPoles());
         
         tower.hb(tower.A, tower.B, tower.C, n);
-        
-        //tower.hb2(tower.A, tower.B, tower.C, n);
+       
 		s.close();
 	}
-	
-	
-	
-	/*
-	public void hb2(Pole a, Pole b, Pole c, int n){
-        if (n > 1) {
-
-            hb2(a, c, b, n-1);  
-             
-            int dics = a.getDisc().pop();
-            b.getDisc().push(dics);
-            
-            System.out.println(++turn + ". Diska " + dics + " nuo " + a.getName() + " perkelti ant " + c.getName() +  ". " + printAllPoles()); 
-            
-            hb2(c, b, a, n-1);    
-        }         
-    }
-    */
-	
 	
 }
